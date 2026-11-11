@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PYSCRIPT CDN -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Project - Element Checker</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg p-3 " style="background-color: lavenderblush;">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html"><b>Student Showcase</b></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" target="_self">Homepage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html" target="_self">Club Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="element.html" target="_self">Element Checker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="creator.html" target="_self">Meet the Creator!</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="mt-5">
+        <h1 class="text-center"><b>Element Checker</b></h2>
+    </div>
+
+    <div class="container mt-5 p-5 w-50 rounded-3 border" style="background-color: lavenderblush;">
+
+        <form>
+            <!-- SYMBOL INPUT -->
+            <label><b>Element Symbol (NON-METALS ONLY)</b></label><br>
+            <input type="text" id="symbol" placeholder="Example: H, O, Cl, N" class="form-control"><br><br>
+            
+            <!-- BUTTON -->
+            <input type="button" py-click="confirm_element" class="btn form-control" style="background-color: pink;" value="Check Element Details">
+
+        </form>
+
+    </div>
+    <br><br>
+
+    <div class="container mt-5 p-5 w-50 rounded-3 border" id="output2" style="background-color: lavenderblush;"></div>
+
+    <footer class="text-dark mt-5" style="background-color: lavenderblush;">
+    <div class="container py-4 text-center">
+        <p class="mb-1">&copy; 2026 Zarina Perez 2Q Project</p>
+        <p class="mb-0 small">All Rights Reserved</p>
+    </div>
+    </footer>
+
+    <!-- Makes sure that python code of other htmls don't overlap -->
+        <div style="display: none;">
+            <div id="result"></div>
+            <div id="total"></div>
+            <div id="interests"></div>
+            <div id="hobbies"></div>
+        </div>
+
+    <py-script src="main.py"></py-script>
+    
+</body>
+</html>
